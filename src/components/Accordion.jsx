@@ -16,19 +16,26 @@ const Accordion = ({
 
   return (
     <div className={`accordion-component ${isExpanded ? "expanded" : ""}`}>
-      <div className="header" onClick={toggleExpand}>
+      <div
+        className="header"
+        onClick={toggleExpand}
+        aria-expanded={isExpanded}
+        aria-controls="accordion-content"
+        role="button"
+        tabIndex={0}
+      >
         <span className="title">{heading}</span>
         <span className="arrow-container">
           <i className={`arrow ${isExpanded ? "up" : "down"}`}></i>
         </span>
       </div>
-      <div className="content mob-l-r-pad-20">
+      <div id="accordion-content" className="content mob-l-r-pad-20">
         <div className="image-container">
-          <img src={imageUrl} alt="Fly Fishing" className="image" />
+          <img src={imageUrl} alt={heading} className="image" />
         </div>
         <div
           className="text-container"
-          style={{ '--feature-bg-url': `url(${imageUrlMob})` }}
+          style={{ "--feature-bg-url": `url(${imageUrlMob})` }}
         >
           <h3 className="title">{heading}</h3>
           <p className="description">{description}</p>

@@ -266,7 +266,9 @@ nav ul li a {
   .header-navbar-container {
     padding: 12px 24px;
   }
-
+  .header-navbar-container .nav-bar ul li {
+    padding: 0 20px;
+  }
   .mob-hide {
     display: none;
   }
@@ -282,12 +284,9 @@ nav ul li a {
     top: -100%;
     transition: all 0.4s ease-in-out;
     right: 0;
-    width:300px;
+    width: 300px;
     background-color: #f0f0f0;
     z-index: 10;
-    li{
-      padding: 0 20px;
-    }
   }
 
   .nav-bar .menu-btn:checked ~ ul {
@@ -418,7 +417,7 @@ nav ul li a {
       padding: 8px 0;
     }
     nav ul {
-      display: block;
+      display: flex;
       background-color: inherit;
       flex-direction: row;
       justify-content: center;

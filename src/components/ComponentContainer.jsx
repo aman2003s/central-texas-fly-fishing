@@ -1,7 +1,11 @@
 import React from "react";
 
-const ComponentContainer = ({ children }) => {
-  return <div className="component-container">{children}</div>;
+const ComponentContainer = ({ children, ...rest }) => {
+  return (
+    <section className="component-container" {...rest}>
+      {children}
+    </section>
+  );
 };
 
 export default ComponentContainer;
