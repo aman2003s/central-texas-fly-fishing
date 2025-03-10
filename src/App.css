@@ -1,42 +1,286 @@
+/* Importing font from web */
+@import url("https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gluten:wght@100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 1440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "inter";
+}
+.mob-hide {
+  display: block;
+}
+.mob-show {
+  display: none;
+}
+h1 {
+  font-size: 56px;
+  font-family: "inter";
+  line-height: 1.12;
+  font-weight: 600;
+  text-wrap: balance;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h2 {
+  font-size: 48px;
+  font-family: "inter";
+  line-height: 1.12;
+  font-weight: 600;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+h3 {
+  font-size: 32px;
+  font-family: "inter";
+  line-height: 1.12;
+  font-weight: 600;
+}
+
+.header-navbar-container {
+  width: 100%;
+  max-width: 1024px;
+  padding: 8px 0;
+
+  display: flex;
+  justify-content: space-between;
+}
+.header-logo {
+  display: flex;
+  align-items: center;
+  font-family: "Gluten";
+  font-size: 20px;
+}
+
+.logo-img {
+  width: 72px;
+}
+
+.logo-text {
+  padding-left: 12px;
+}
+
+.nav-bar .menu-icon,
+.menu-btn {
+  display: none;
+}
+.nav-bar {
+  padding: 4px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+nav ul li {
+  display: inline;
+  float: left;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: inherit;
+  font-family: "Inter";
+  font-size: 16px;
+  letter-spacing: 0.2px;
+  padding: 4px 0;
+  display: flex;
+  &:visited {
+    color: inherit;
   }
-  to {
-    transform: rotate(360deg);
+  &:active {
+    color: inherit;
+  }
+  &.selected {
+    border-bottom: 2px solid #1c1812;
+    padding: 4px 0 2px 0;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.component-container {
+  width: 100%;
+  max-width: 1024px;
+  padding: 80px 0px;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+}
+.hero-text {
+  width: 100%;
+  max-width: 600px;
+  h1 {
+    padding-top: 24px;
+    letter-spacing: 2px;
+  }
+  p {
+    font-size: 20px;
+    padding-top: 16px;
+    color: #65625e;
+    line-height: 1.5;
+    letter-spacing: 0.2px;
+  }
+  button {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #514432;
+    border-radius: 4px;
+    letter-spacing: 0.2px;
+    border: 0;
+    margin: 16px 0 0 0;
+    padding: 8px 12px;
   }
 }
-
-.card {
-  padding: 2em;
+.hero-img {
+  width: 400px;
+  padding-bottom: 4px;
 }
+.feature-container {
+  background-color: #f1ece1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .feature-text {
+    letter-spacing: 1.5px;
+    h2 {
+      padding-bottom: 24px;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  #root {
+    width: 100%;
+  }
+  .header-navbar-container {
+    padding: 12px 24px;
+  }
 
-.read-the-docs {
-  color: #888;
+  .mob-hide {
+    display: none;
+  }
+  .mob-show {
+    display: block;
+  }
+  .nav-bar ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #f0f0f0;
+    z-index: 10;
+  }
+
+  .nav-bar .menu-btn:checked ~ ul {
+    display: flex;
+  }
+
+  .nav-bar .menu-btn {
+    display: none;
+  }
+
+  .nav-bar .menu-icon {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    padding: 11px;
+  }
+
+  .nav-bar .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 18px;
+  }
+
+  .nav-bar .navicon::before,
+  .nav-bar .navicon::after {
+    background: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+  }
+
+  .nav-bar .navicon::before {
+    top: 5px;
+  }
+
+  .nav-bar .navicon::after {
+    top: -5px;
+  }
+
+  .nav-bar .menu-btn:checked + label .navicon {
+    background: transparent;
+  }
+
+  .nav-bar .menu-btn:checked + label .navicon::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  .nav-bar .menu-btn:checked + label .navicon::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  nav ul li {
+    display: inline;
+    float: left;
+  }
+  .logo-text {
+    display: none;
+  }
+  .logo-img {
+    width: 58px;
+  }
+  .component-container {
+    padding: 0;
+  }
+  .hero-container {
+    display: block;
+  }
+  .hero-img {
+    width: 100%;
+    padding-bottom: 0;
+  }
+  .hero-text {
+    padding: 40px 0;
+    h1 {
+      padding: 0;
+      font-size: 40px;
+    }
+  }
+  .feature-container {
+    .feature-text {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      h2 {
+        padding: 0 24px;
+        font-size: 40px;
+      }
+    }
+  }
+
+  .mob-l-r-pad-20 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .mob-l-r-pad-24 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }

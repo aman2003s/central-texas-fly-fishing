@@ -1,35 +1,58 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import React, { lazy, Suspense } from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { Route, BrowserRouter, Routes, Navigate } from "react-router-dom";
+import { mainNav } from "./assets/navLinksData";
+import PageNotFound from "./components/PageNotFound";
+
+const getComponent = (componentName) =>
+  lazy(async () => {
+    try {
+      const module = await import(`./components/${componentName}`);
+      return module;
+    } catch (error) {
+      console.log(error);
+      return null;
+    }
+  });
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <BrowserRouter>
+        <Header />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Routes>
+              {mainNav.map((elem) => {
+                const componentName = elem.name.split(" ")[0];
+                const Component = getComponent(componentName);
+                if (Component) {
+                  return (
+                    <Route
+                      key={elem.url}
+                      path={elem.url}
+                      element={<Component />}
+                    />
+                  );
+                } else {
+                  <Route
+                    key={elem.url}
+                    path={elem.url}
+                    element={<Navigate to="/404" replace />}
+                  />;
+                  console.error(`Component not found for: ${Component}`);
+                  return null;
+                }
+              })}
+              <Route path="/404" element={<PageNotFound />} />
+              <Route path="*" element={<Navigate to="/404" replace />} />
+            </Routes>
+          </Suspense>
+        <Footer />
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
