@@ -27,6 +27,14 @@
   display: flex;
 }
 
+.mob-hide {
+  display: block;
+}
+
+.mob-show {
+  display: none;
+}
+
 .story-card .text-container {
   padding: 0 var(--story-card-padding);
 }
@@ -59,9 +67,17 @@
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   .story-card {
     width: 100%;
+  }
+
+  .mob-hide {
+    display: none;
+  }
+
+  .mob-show {
+    display: block;
   }
 
   .story-card .text-container {

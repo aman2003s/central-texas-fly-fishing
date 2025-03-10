@@ -11,7 +11,8 @@
   --light-bg: #f1ece1;
   --dark-bg: #1c1812;
   --light-text: #f7f7f6;
-  --container-width: 1024px;
+  --container-width: 1080px;
+  --side-margins: 0 28px;
   --h1-size: 56px;
   --h2-size: 48px;
   --h3-size: 32px;
@@ -93,7 +94,7 @@ h3 {
 .header-navbar-container {
   width: 100%;
   max-width: var(--container-width);
-  padding: 8px 0;
+  padding: 8px 28px;
   display: flex;
   justify-content: space-between;
 }
@@ -165,7 +166,7 @@ nav ul li a.selected {
 .component-container {
   width: 100%;
   max-width: var(--container-width);
-  padding: 80px 0;
+  padding: 80px 28px;
 }
 
 .hero-container {
@@ -254,6 +255,7 @@ nav ul li a.selected {
 .footer-internal-container {
   width: 100%;
   max-width: var(--container-width);
+  padding: 0 28px;
   display: flex;
   justify-content: space-between;
 }
