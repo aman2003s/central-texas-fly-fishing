@@ -4,14 +4,14 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Route, BrowserRouter, Routes, Navigate } from "react-router-dom";
 import { mainNav, footerNav } from "./assets/navLinksData";
-import PageNotFound from "./components/PageNotFound";
+import PageNotFound from "./pages/PageNotFound";
 import Loading from "./components/Loading";
 
-const componentModules = import.meta.glob("./components/*.jsx");
+const componentModules = import.meta.glob("./pages/*.jsx");
 
 const routes = mainNav.concat(footerNav).map((navItem) => {
   const componentName = navItem.name.split(" ")[0];
-  const componentPath = `./components/${componentName}.jsx`;
+  const componentPath = `./pages/${componentName}.jsx`;
   let lowerCasePath = `/${componentName.toLowerCase()}`;
 
   // Special case for "Home"

@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../public/central-texas-fly-fishing-logo.png";
+import logo from "/central-texas-fly-fishing-logo.png";
 import { mainNav } from "../assets/navLinksData";
 import { Link, useLocation } from "react-router-dom";
 
@@ -8,13 +8,21 @@ const Header = () => {
 
   return (
     <div className="header-navbar-container">
-      <div className="header-logo">
-        <img src={logo} className="logo-img" alt="Central Texas Fly Fishing Logo" />
+      <Link to="/" className="header-logo">
+        <img
+          src={logo}
+          className="logo-img"
+          alt="Central Texas Fly Fishing Logo"
+        />
         <span className="logo-text">Central Texas Fly Fishing</span>
-      </div>
+      </Link>
       <nav className="nav-bar">
         <input className="menu-btn" type="checkbox" id="menu-btn" />
-        <label className="menu-icon" htmlFor="menu-btn">
+        <label
+          className="menu-icon"
+          htmlFor="menu-btn"
+          aria-label="Toggle Navigation"
+        >
           <span className="navicon" />
         </label>
         <ul>

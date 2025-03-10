@@ -1,7 +1,7 @@
 import React from "react";
-import Hero from "./Hero";
-import Feature from "./Feature";
-import Story from "./Story";
+import Hero from "../components/Hero";
+import Feature from "../components/Feature";
+import Story from "../components/Story";
 
 const Home = () => {
   return (
