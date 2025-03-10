@@ -1,5 +1,5 @@
 import React from "react";
-import ComponentContainer from "./componentContainer";
+import ComponentContainer from "./ComponentContainer";
 import Accordion from "./Accordion";
 import imageUrl from "../../public/feature-1.png";
 import imageUrlMob1 from "../../public/feature-1-mob.png";

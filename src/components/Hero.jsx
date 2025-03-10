@@ -1,5 +1,5 @@
 import React from "react";
-import ComponentContainer from "./componentContainer";
+import ComponentContainer from "./ComponentContainer";
 import heroImage from "../../public/fishing-desktop-hero-img.png";
 import heroImageMob from "../../public/fishing-mob-hero-img.png";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import ComponentContainer from "./componentContainer";
+import ComponentContainer from "./ComponentContainer";
 import SingleStoryCard from "./SingleStoryCard";
 import storyImage1 from "../../public/story-1.png";
 import storyImage2 from "../../public/story-2.png";
