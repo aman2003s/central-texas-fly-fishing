@@ -5,7 +5,6 @@ const Accordion = ({
   imageUrl,
   imageUrlMob = imageUrl,
   heading,
-  subHeading,
   description,
   initialState = false,
 }) => {
@@ -31,7 +30,7 @@ const Accordion = ({
           className="text-container"
           style={{ '--feature-bg-url': `url(${imageUrlMob})` }}
         >
-          <h3 className="title">{subHeading}</h3>
+          <h3 className="title">{heading}</h3>
           <p className="description">{description}</p>
           <button className="learn-more-button">Learn more</button>
         </div>

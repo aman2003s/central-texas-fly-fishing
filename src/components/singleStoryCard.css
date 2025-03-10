@@ -1,0 +1,26 @@
+.story-card{
+    width: 488px;
+    display: flex;
+    .text-container{
+        padding: 0 24px;
+        h4{
+            font-size: 32px;
+            line-height: 1.5;
+            font-family: 'gluten';
+            font-weight: 400;
+            letter-spacing: 0.2px;
+            margin: 0;
+        }
+        p{
+            font-size: 14px;
+            font-family: 'inter';
+            padding-top: 4px;
+            padding-bottom: 15px;
+            letter-spacing: 0;
+        }
+        button{
+            margin-top: 0;
+
+        }
+    }
+}
