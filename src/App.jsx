@@ -3,7 +3,7 @@ import React, { lazy, Suspense } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Route, BrowserRouter, Routes, Navigate } from "react-router-dom";
-import { mainNav } from "./assets/navLinksData";
+import { mainNav, footerNav } from "./assets/navLinksData";
 import PageNotFound from "./components/PageNotFound";
 
 const getComponent = (componentName) =>
@@ -16,7 +16,7 @@ function App() {
         <Header />
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
-            {mainNav.map((elem) => {
+            {mainNav.concat(footerNav).map((elem) => {
               const componentName = elem.name.split(" ")[0];
               const Component = getComponent(componentName);
               if (Component) {
