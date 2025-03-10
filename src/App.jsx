@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import { Route, BrowserRouter, Routes, Navigate } from "react-router-dom";
 import { mainNav, footerNav } from "./assets/navLinksData";
 import PageNotFound from "./components/PageNotFound";
+import Loading from "./components/Loading";
 
 const componentModules = import.meta.glob("./components/*.jsx");
 
@@ -30,7 +31,7 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loading />}>
           <Routes>
             {routes}
             <Route path="/404" element={<PageNotFound />} />
