@@ -27,11 +27,11 @@
   display: flex;
 }
 
-.mob-hide {
+.mob-single-hide {
   display: block;
 }
 
-.mob-show {
+.mob-single-show {
   display: none;
 }
 
@@ -72,11 +72,11 @@
     width: 100%;
   }
 
-  .mob-hide {
+  .mob-single-hide {
     display: none;
   }
 
-  .mob-show {
+  .mob-single-show {
     display: block;
   }
 
