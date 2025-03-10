@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
 
 const Privacy = () => {
   return (
-    <div>
-      Work in progress: This page is not yet built
+    <div className="pad-t-b-40">
+      <h1>In progress</h1>
+      Work in progress: This page ({Privacy.name} component) is not yet built
     </div>
-  )
-}
+  );
+};
 
-export default Privacy
+export default Privacy;
