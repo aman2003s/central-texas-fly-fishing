@@ -315,10 +315,16 @@ nav ul li a.selected {
 
   .header-navbar-container .nav-bar ul {
     margin: 0 8px;
+    border: 1px solid #ccc;
   }
 
-  .header-navbar-container .nav-bar ul li {
-    padding: 0 20px;
+  .header-navbar-container .nav-bar ul li a {
+    margin: 12px 20px;
+  }
+  nav ul li a.selected {
+    border-bottom: 1px solid var(--secondary-color);
+    border-top: 1px solid var(--secondary-color);
+    padding: 4px 0 4px 0;
   }
 
   .mob-hide {
@@ -336,8 +342,9 @@ nav ul li a.selected {
     margin: 0;
     flex-direction: column;
     position: absolute;
-    top: -200%;
-    transition: all 0.4s ease-in-out;
+    top: -150%;
+    opacity: 0;
+    transition: all 0.5s ease 0.2s;
     right: 0;
     width: 300px;
     background-color: #f0f0f0;
@@ -345,7 +352,9 @@ nav ul li a.selected {
   }
 
   .nav-bar .menu-btn:checked ~ ul {
+    opacity: 1;
     top: 60px;
+    gap: 0;
     display: flex;
   }
 

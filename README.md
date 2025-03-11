@@ -1,12 +1,66 @@
-# React + Vite
+# Central Texas Fly Fishing Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a website for Central Texas Fly Fishing, built using React and Vite.
 
-Currently, two official plugins are available:
+## Launched Link
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[https://central-texas-fly-fishing.vercel.app/](https://central-texas-fly-fishing.vercel.app/)
 
-## Expanding the ESLint configuration
+## Project Overview
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The website aims to provide information about fly fishing in Central Texas, including stories, features, and contact information. It's designed to be responsive and user-friendly.
+
+## Technologies Used
+
+* **React:** For building the user interface.
+* **Vite:** As a build tool for fast development.
+* **React Router:** For navigation within the application.
+* **Custom/Native CSS:** For styling.
+* **Vercel:** For deployment.
+
+## Getting Started
+
+To run this project locally, follow these steps:
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone [https://github.com/aman2003s/central-texas-fly-fishing.git](https://github.com/aman2003s/central-texas-fly-fishing.git)
+    cd central-texas-fly-fishing
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    npm install
+    # or
+    yarn install
+    # or
+    pnpm install
+    ```
+
+3.  **Run the development server:**
+
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    # or
+    pnpm dev
+    ```
+
+4.  **Open your browser:**
+
+    Visit `http://localhost:5173/` (or the URL provided by Vite) in your browser.
+
+## Build for Production
+
+To build the project for production, run:
+
+```bash
+npm run build
+# or
+yarn build
+# or
+pnpm build
+```
