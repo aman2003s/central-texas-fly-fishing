@@ -296,6 +296,7 @@ nav ul li a.selected {
 
 .footer-internal-container nav ul li a.selected {
   border-bottom: 2px solid var(--secondary-color);
+  color: var(--light-text);
   padding: 4px 0 2px 0;
 }
 
@@ -492,6 +493,8 @@ nav ul li a.selected {
   }
 
   .footer-internal-container nav ul {
+    color: var(--light-text);
+    opacity: 1;
     display: flex;
     background-color: inherit;
     flex-direction: row;

@@ -24,7 +24,7 @@ const Footer = () => {
                         <ul>
                             {footerNav.map((elem, index) => (
                                 <li key={elem.url}>
-                                    <Link to={elem.url} className={index === 0 ? `selected` : ``}>
+                                    <Link to={elem.url} >
                                         {elem.name}
                                     </Link>
                                 </li>
